@@ -1,3 +1,90 @@
+# Student Management System – Completed Implementation
+
+**Author:** Aliyah Fakunle
+
+**Course:** CIS 3339 – Homework 1
+
+## Project Overview
+
+This application uses Vue 3, Vue Router, Pinia, Node.js, Express, MongoDB, and Mongoose to manage students, courses, and enrollments.
+
+## Required Software
+
+- Node.js and npm
+- MongoDB Community Edition
+- Modern web browser
+- Git
+
+## Environment Configuration
+
+The `backend/.env` file contains:
+
+```env
+MONGODB_URI=mongodb://127.0.0.1:27017/cis3339_homework1
+```
+
+## Installation and Startup
+
+### 1. Start MongoDB
+
+Open PowerShell as Administrator:
+
+```powershell
+Start-Service MongoDB
+Get-Service MongoDB
+```
+
+Confirm that MongoDB is running.
+
+### 2. Install backend dependencies
+
+From the project root:
+
+```bash
+cd backend
+npm install
+```
+
+### 3. Install frontend dependencies
+
+```bash
+cd ../frontend
+npm install
+```
+
+### 4. Build the Vue application
+
+```bash
+npm run build
+```
+
+### 5. Start the production server
+
+```bash
+cd ../backend
+node server.js
+```
+
+### 6. Open the application
+
+Visit http://localhost:3000 in your browser.
+
+## Application Features
+
+- Add, search, display, and delete students.
+- Add, list, and delete courses.
+- Enroll students in courses.
+- Display enrolled students by course.
+- Prevent duplicate records.
+- Store data persistently in MongoDB.
+- Manage shared application state using Pinia.
+- Navigate between views using Vue Router.
+
+---
+
+## Original Assignment Instructions
+
+
 # CIS 3339 Homework 1: Vue 3 and MongoDB Migration
 
 ## Assignment Overview
