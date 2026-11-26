@@ -3,6 +3,7 @@
 import { ref, computed, onMounted } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useSchoolStore } from '../stores/schoolStore'
+import StatusMessage from '../components/StatusMessage.vue';
 
 const store = useSchoolStore()
 const { students } = storeToRefs(store)
@@ -183,9 +184,9 @@ onMounted(loadStudents)
       </button>
     </form>
 
-    <p v-if="message" role="status">{{ message }}</p>
-    <p v-if="error" role="alert">{{ error }}</p>
-    <p v-if="loading">Loading...</p>
+   <StatusMessage :message="message" type="success" />
+   <StatusMessage :message="error" type="error" />
+   <StatusMessage v-if="loading" message="Loading..." type="info" />
 
     <h3>Student Records</h3>
 

@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useSchoolStore } from '../stores/schoolStore';
+import StatusMessage from '../components/StatusMessage.vue'
 
 const store = useSchoolStore();
 const { students, courses } = storeToRefs(store);
@@ -116,8 +117,9 @@ onMounted(loadData);
       <button type="submit">Enroll Student</button>
     </form>
 
-    <p v-if="message">{{ message }}</p>
-
+   <StatusMessage :message="message" type="success" />
+   <StatusMessage :message="error" type="error" />
+   <StatusMessage v-if="loading" message="Loading..." type="info" />
     <hr />
 
     <h3>View Enrolled Students</h3>
