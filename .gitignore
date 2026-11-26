@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# Production build
+dist/
+
+# Editor settings
+.vscode/
+
+# Backup frontend
+/frontend-old/
+
+# Accidentally created root source folder
+/src/
